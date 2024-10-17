@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="aset/favicon.png">
+  <link rel="stylesheet" href="root.css" />
+  <link rel="stylesheet" href="resi.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="main.css" />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="progress-bar.js"></script>
+  <title>Cek Permohonan</title>
+</head>
+
+<body>
+  <nav class="navbar flex">
+    <div class="logo"><a href="index.html"><img src="aset/bravologo.png" alt="logo" /></a></div>
+    <div class="mobile-menu"><span></span></div>
+  </nav>
+
+  <section id="main" class="flex">
+    <h2>Bangko Pantau</h2>
+    <p>
+      Cek permohonan penghapusan NPWP dan pencabutan PKP<br>KPP Pratama Bangko
+    </p>
+
+    <div id="container-resi" class="resi">
+      <div class="form-container">
+        <form action="/search" method="POST">
+          <ul>
+            <li>
+              <label for="search">Nama</label>
+              <input type="text" id="search" name="search" />
+              <small>Contoh: Budi Doremi</small>
+            </li>
+            <li>
+              <label for="nomor">NPWP</label>
+              <input type="text" id="nomor" name="nomor"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 16);" maxlength="15"
+                title="Harus berisi 16 digit angka" required />
+              <small>Contoh: 123456789333000</small>
+            </li>
+
+            <li>
+              <label for="daerah">Nomor Permohonan</label>
+              <input type="text" id="daerah" name="daerah" />
+              <small>Contoh: S-123/S/KPP.270703/2024</small>
+            </li>
+
+            <button class="btn btn-more track" type="button" onclick="searchGoogleSheets()">
+              <i class="fa-regular fa-magnifying-glass" style="font-family: Font Awesome 5 Free; font-weight: 900"></i>
+              Cari
+            </button>
+          </ul>
+        </form>
+      </div>
+      <div class="detail-container">
+        <h3 class="title-section"><span>Cek Permohonanmu</span> </h3>
+        <div class="body-card flex">
+          <div id="summary" class="display-false"></div>
+
+          <div class="flex info-card">
+
+            <div class="progress-bar-wrapper"></div>
+            <div></div>
+            <div></div>
+            <div id="imageContainer"></div>
+  
+            <div id="searchResult" style="font-size: 13px; color: #203163; font-weight: bold; text-align: center;"></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container-fill" class="display-false">
+      <h3 class="title-section"><span>Lihat</span> Lokasi Paket</h3>
+      <div class="progress-history"></div>
+    </div>
+  </section>
+
+  <footer class="main-footer" id="footer">
+
+    <div class="footer-top flex">
+
+
+    </div>
+
+    <div class="footer-cc">
+      <p>Copyrights © 2024 BravoPantau by Yesaya</a></p>
+    </div>
+  </footer>
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+.display-false {
+  display: none;
+}
+.navbar {
+  background: rgba(250, 250, 250, 0.2);
+  backdrop-filter: blur(100px);
+}
+
+/* Main section */
+#main {
+  background: linear-gradient(148.67deg, #072dac 20.53%, #fafca8 120.74%);
+  text-align: center;
+  color: #fff;
+  flex-direction: column;
+  padding-bottom: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+#main > h2 {
+  width: 89%;
+  margin-top: 20px;
+  font-size: 40px;
+}
+#main > P {
+  width: 89%;
+  font-size: 13px;
+  margin-top: 6px;
+}
+#container-resi {
+  margin: 3rem 0 0;
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 95%;
+  color: var(--color-text);
+}
+.form-container {
+  background-color: #f6f6f6;
+  padding: 50px 35px;
+  position: relative;
+}
+.form-container .act {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.form-container form {
+  margin-top: 3rem;
+}
+.form-container form ul > li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 10px;
+  margin: 10px 0;
+}
+.form-container form ul li > * {
+  width: 100%;
+  text-align: left;
+  font-size: 17px;
+
+  
+}
+.form-container form ul li label {
+  font-weight: 500;
+}
+.form-container form ul li small {
+   width: 100%;
+   text-align: left;
+   font-size: 13px;
+   margin-top: 0;
+   margin-bottom: 0;
+}
+
+
+
+.form-container form ul li > :where(select, input) {
+  padding: 10px;
+}
+button.track {
+  margin-top: 4rem !important;
+  color: #fff;
+  background-color: var(--color-red);
+  width: 80%;
+}
+button.track:disabled,
+button.track[disabled] {
+  background-color: rgba(0, 0, 0, 10%);
+  color: rgba(0, 0, 0, 30%);
+  cursor: no-drop;
+  border: none;
+}
+
+h3.title-section {
+  text-align: left;
+  font-weight: 400;
+}
+h3.title-section span {
+  color: var(--color-red);
+  font-weight: 600;
+}
+#main .detail-container {
+  padding: 30px;
+  text-align: left;
+  background-color: #fff;
+  
+}
+.detail-container .body-card {
+  margin-top: 10px;
+  width: 100%;
+  height: calc(100% - 40px);
+  border-radius: 10px;
+  border: 3px dashed #f6f6f6;
+  justify-content: center;
+}
+.detail-container .body-card > div img {
+  width: 100%;
+}
+.detail-container .body-card > .info-card {
+  flex-direction: column;
+  row-gap: 10px;
+  font-size: 10px;
+  width: 28rem;
+  color: rgb(126, 126, 126);
+}
+
+
+
+#summary {
+  margin: 10px;
+}
+#summary table > * {
+  vertical-align: text-top;
+}
+#summary table {
+  width: 100%;
+}
+#summary table td:first-child {
+  min-width: 4rem;
+}
+#summary table td:nth-child(2) {
+  padding: 0 5px;
+}
+
+#container-fill {
+  border-radius: 1px;
+  overflow: hidden;
+  width: 95%;
+  color: var(--color-text);
+  background-color: #fff;
+  margin: 15px 0 0;
+  padding: 1.5rem;
+}
+.progress-section {
+  margin: 3rem 0;
+}
+.progress-section div:first-child {
+  width: 19%;
+  min-width: 9rem;
+}
+
+.progress-section > .radio {
+  margin: 0 20px;
+  position: relative;
+}
+.progress-section > .radio::before,
+.progress-section > .radio::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.progress-section > .radio::after {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: var(--color-orange);
+}
+.progress-section > .radio::before {
+  height: 9rem;
+  border-left: 2px solid #e9e9e9;
+}
+.progress-section:first-child > .radio::after {
+  background-color: var(--color-red);
+}
+.progress-section:last-child > .radio::after {
+  background-color: rgb(18, 212, 99);
+}
+.progress-section:first-child > .radio::before {
+  height: 5.5rem;
+  transform: translate(-50%, 0);
+}
+.progress-section:last-child > .radio::before {
+  height: 5.5rem;
+  transform: translate(-50%, -100%);
+}
+
+@media (max-width: 600px) {
+  #container-resi {
+    grid-template-columns: 2fr;
+  }
+  button.track {
+    margin-top: 0 !important;
+  }
+  .flex.info-card {
+    margin: 20px 0;
+  }
+    .flex.info-card,
+    #container-resi,
+    #main .detail-container,
+    .form-container {
+      border-radius: 1px;
+      width: 100%;
+      overflow-x: auto;
+      /* Buat keduanya mengambil lebar penuh pada layar kecil */
+    }
+  
+}
+

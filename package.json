@@ -1,0 +1,23 @@
+{
+  "name": "api-google-sheets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "googleapis": "^131.0.0",
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^3.0.3"
+  }
+}
